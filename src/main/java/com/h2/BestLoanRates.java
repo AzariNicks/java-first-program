@@ -10,7 +10,7 @@ public class BestLoanRates {
         System.out.println("Enter your name");
         String name = scanner.nextLine();
         System.out.println("Hello " + name);
-        System.out.println("Hello the loan term (in years)");
+        System.out.println("Enter the loan term (in years)");
         int loanTermInYears = scanner.nextInt();
         float bestRate = getRates(loanTermInYears);
         if(bestRate == 0.0f){System.out.println("No available rates for term: " + loanTermInYears + " years");}
@@ -19,13 +19,18 @@ public class BestLoanRates {
 
         }
 
-
         public static final Map<Integer, Float>
-                bestRates = Map.of(1, 5.50f, 2, 3.45f, 3, 2.67f);
+                bestRates = Map.of(
+                        1, 5.50f,
+                        2, 3.45f,
+                        3, 2.67f
+        );
 
 
     public static float getRates(int loanTermInYears){
-    if (bestRates.containsKey(loanTermInYears)){return loanTermInYears;}
+    if
+    (bestRates.containsKey(loanTermInYears))
+    {return bestRates.get(loanTermInYears);}
         return 0.0f;
     }
 
