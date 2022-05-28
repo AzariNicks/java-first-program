@@ -15,7 +15,7 @@ private float[] credits;
 public SavingsCalculator(float[] credits, float[] debits){
     this.credits = credits;
     this.debits = debits;
-System.out.println(dtf.format(now));
+
 
 };
 private float sumOfCredits(){
