@@ -49,8 +49,9 @@ private static int remainingDaysInMonth(java.time.LocalDate date){
     // remaining days are broken gotta fix it lol
 
     int totalDaysInMonth = yearMonth.lengthOfMonth();
+    // totalDays is working so its prolly localDateTime
     int remainingDays = totalDaysInMonth - LocalDateTime.now().getDayOfMonth();
-    return totalDaysInMonth;
+    return LocalDateTime.now().getDayOfMonth();
 
 }
 public float calculate(){
