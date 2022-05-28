@@ -1,9 +1,7 @@
-package com.h2;
-
 import java.sql.Array;
 import java.util.Map;
 import com.h2.BestLoanRates;
-import  com.h2.MortgageCalculator;
+import com.h2.MortgageCalculator;
 import com.h2.SavingsCalculator;
 
 import static java.util.Arrays.copyOfRange;
