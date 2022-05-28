@@ -40,18 +40,17 @@ private float sumOfCredits(){
 // were supposed to get 29 becuz thers 30 more days in the month
 
 
-private static int remainingDaysInMonth(java.time.LocalDate date){
-    int year = LocalDateTime.now().getYear();
-    int monthValue = LocalDateTime.now().getMonthValue();
+private static int remainingDaysInMonth(LocalDate date){
 
 
-    YearMonth yearMonth = YearMonth.of(year, monthValue);
+
+    YearMonth yearMonth = YearMonth.of(date.getYear(), date.getMonth());
     // remaining days are broken gotta fix it lol
 
     int totalDaysInMonth = yearMonth.lengthOfMonth();
     // totalDays is working so its prolly localDateTime
-    int remainingDays = totalDaysInMonth - LocalDateTime.now().getDayOfMonth();
-    return LocalDateTime.now().getDayOfMonth();
+    int remainingDays = totalDaysInMonth - date.getDayOfMonth();
+    return remainingDays;
 
 }
 public float calculate(){
