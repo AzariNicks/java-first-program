@@ -4,16 +4,17 @@ public class Utilities {
 
 public static long getLongValue(String in){
     long out = Long.MIN_VALUE;
-    try{out = Long.parseLong(in)  ;
+    try{
+        out = Long.parseLong(in);
     }catch (NumberFormatException e){
         new IllegalArgumentException(in +
                 " cannot b" +
                 "e converted" +
                 " into a 'long'" +
                 " value. Exiting program.");
-        return out;
     }
     return out;
+
 }
     public static int getIntValue(String in){
         int out = Integer.MIN_VALUE;
@@ -24,7 +25,7 @@ public static long getLongValue(String in){
                     " converted" +
                     " into a 'int'" +
                     " value. Exiting program.");
-            return out;
+
         }
         return out;
     }
@@ -37,7 +38,7 @@ public static long getLongValue(String in){
                     " converted" +
                     " into a 'float'" +
                     " value. Exiting program.");
-            return out;
+
         }
         return out;
     }
