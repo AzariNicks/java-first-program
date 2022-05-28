@@ -6,8 +6,8 @@ public static long getLongValue(String in){
     long out = Long.MIN_VALUE;
     try{
         out = Long.parseLong(in);
-    }catch (NumberFormatException e){
-        new IllegalArgumentException(in +
+    }   catch (NumberFormatException e){
+        throw new IllegalArgumentException(in +
                 " cannot b" +
                 "e converted" +
                 " into a 'long'" +
@@ -20,7 +20,7 @@ public static long getLongValue(String in){
         int out = Integer.MIN_VALUE;
         try{out = Integer.parseInt(in)  ;
         }catch (NumberFormatException e){
-            new IllegalArgumentException(in +
+            throw new IllegalArgumentException(in +
                     " cannot be" +
                     " converted" +
                     " into a 'int'" +
@@ -33,7 +33,7 @@ public static long getLongValue(String in){
         float out = Float.MIN_VALUE;
         try{out = Float.parseFloat(in)  ;
         }catch (NumberFormatException e){
-            new IllegalArgumentException(in +
+            throw new IllegalArgumentException(in +
                     " cannot be" +
                     " converted" +
                     " into a 'float'" +
