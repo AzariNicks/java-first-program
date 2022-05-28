@@ -1,4 +1,5 @@
 package com.h2;
+import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDateTime;
 import java.time.YearMonth;
@@ -32,7 +33,7 @@ private float sumOfCredits(){
         return sum;
     }
     int LocalDate;
-private static int remainingDaysInMonth(int date){
+private static int remainingDaysInMonth(java.time.LocalDate date){
     int year = LocalDateTime.now().getYear();
     int monthValue = LocalDateTime.now().getMonthValue();
 
