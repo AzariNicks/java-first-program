@@ -4,33 +4,32 @@ import java.text.DecimalFormat;
 
 public class MortgageCalculator {
     private long loanAmount;
-
     private int termInYears;
     private float annualRate;
     private double monthlyPayment;
 
     public MortgageCalculator(long loanAmount, int termInYears, float annualRate){
-        loanAmount = this.loanAmount();
-        termInYears = this.termInYears();
-        annualRate = this.annualRate();
+        loanAmount = this.loanAmount;
+        termInYears = this.termInYears;
+        annualRate = this.annualRate;
     }
     private int getNumberOfPayments(){
-        return termInYears() * 12;
+        return termInYears * 12;
     }
     private float getMonthlyInterestRate(){
-        float interestRate = annualRate() / 100;
+        float interestRate = annualRate / 100;
         return interestRate / 12;
     }
     public void calculateMonthlyPayment(){
-            long P = loanAmount();
+            long P = loanAmount;
             float r = getMonthlyInterestRate();
             int n = getNumberOfPayments();
             double M = P * (((r * Math.pow(1 + r, n))) / ((Math.pow((1 + r), n)) - 1));
-            M = this.monthlyPayment();
+            M = this.monthlyPayment;
     }
     public String toString(){
         DecimalFormat df = new DecimalFormat("####0.00");
-        return "monthlyPayment: " + df.format(monthlyPayment());}
+        return "monthlyPayment: " + df.format(monthlyPayment);}
 
     public static void main(String[] args){
         long loanAmount = Long.parseLong(args[0]);
