@@ -3,18 +3,11 @@ package com.h2;
 import java.text.DecimalFormat;
 
 public class MortgageCalculator {
-    private long loanAmount(){
-        return 0;
-    }
-    private int termInYears(){
-        return 0;
-    }
-    private float annualRate(){
-        return 0;
-    }
-    private double monthlyPayment(){
-        return 0;
-    }
+    private long loanAmount;
+
+    private int termInYears;
+    private float annualRate;
+    private double monthlyPayment;
 
     public MortgageCalculator(long loanAmount, int termInYears, float annualRate){
         loanAmount = this.loanAmount();
