@@ -1,16 +1,14 @@
 package com.h2;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.time.LocalDateTime;
+
 import java.time.YearMonth;
 
 
 public class SavingsCalculator {
-    DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
-    LocalDateTime now = LocalDateTime.now();
 
-private float[] debits;
-private float[] credits;
+    private float[] credits;
+    private float[] debits;
+
 
 public SavingsCalculator(float[] credits, float[] debits){
     this.credits = credits;
