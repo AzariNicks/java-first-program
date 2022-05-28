@@ -40,10 +40,10 @@ private static int remainingDaysInMonth(java.time.LocalDate date){
 
     YearMonth yearMonth = YearMonth.of(year, monthValue);
     int totalDaysInMonth = yearMonth.lengthOfMonth();
-    int remainingDays = LocalDateTime.now().getDayOfMonth() - totalDaysInMonth;
+    int remainingDays = totalDaysInMonth - LocalDateTime.now().getDayOfMonth();
     return remainingDays;
 
-};
+}
 
 
 
