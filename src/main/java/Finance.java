@@ -9,15 +9,16 @@ import static java.util.Arrays.copyOfRange;
 public class Finance {
 
     public final static String BEST_LOAN_RATES = "bestLoanRates";
-    public final static String SAVINGS_CALCULATOR = "savingsCalculator";
-    public final static String MORTGAGE_CALCULATOR = "mortgageCalculator";
+    public final static String SAVINGS_CALCULATOR = "savingsCalculator <credits separated by ','> <debits separated by ','>";
+    public final static String MORTGAGE_CALCULATOR = "mortgageCalculator <loanAmount> <termInYears> <annualRate>";
 
     public final static Map<String, String> commandsToUsage =
             Map.of( BEST_LOAN_RATES      ,    "usage: bestLoanRates",
                     SAVINGS_CALCULATOR   ,    "usage: savingsCalculator",
                     MORTGAGE_CALCULATOR  ,    "usage: mortgageCalculator" );
 
-
+    //  <usage: savingsCalculator <credits separated by ','> <debits separated by ','>>
+    // <usage: savingsCalculator>
     private static boolean validateCommandArguments(String[] args) {
         switch (args[0]){
             case BEST_LOAN_RATES: args[0] = "bestLoanRates";
@@ -33,15 +34,15 @@ public class Finance {
 private static void executeCommand(String command, String[] arguments){
     switch (command) {
         case BEST_LOAN_RATES:
-            System.out.println("Finding best loan rates...");
+            System.out.println("Finding best loan rates ...");
             BestLoanRates.main(arguments);
             return;
         case SAVINGS_CALCULATOR:
-            System.out.println("Finding your net Savings...");
+            System.out.println("Finding your net Savings ...");
             SavingsCalculator.main(arguments);
            return;
         case MORTGAGE_CALCULATOR:
-            System.out.println("Finding Your Monthly payment...");
+            System.out.println("Finding Your Monthly payment ...");
             MortgageCalculator.main(arguments);
             return;
     }}
