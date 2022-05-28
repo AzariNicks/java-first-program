@@ -1,6 +1,5 @@
 package com.h2;
 import java.time.LocalDate;
-
 import java.time.YearMonth;
 
 
@@ -15,14 +14,14 @@ public SavingsCalculator(float[] credits, float[] debits){
     this.debits = debits;
 
 
-};
+}
 private float sumOfCredits(){
     float sum = 0.0f;
     for (float credits:credits){
         sum += credits;
     }
     return sum;
-};
+}
     private float sumOfDebits(){
         float sum = 0.0f;
         for (float debits:debits){
@@ -30,7 +29,7 @@ private float sumOfCredits(){
         }
         return sum;
     }
-    int LocalDate;
+
 // fix, this for some reason we are returning 3 I
 // have a feeling
 // its cuz of how we set up the variables lol
@@ -47,8 +46,8 @@ private static int remainingDaysInMonth(LocalDate date){
 
     int totalDaysInMonth = yearMonth.lengthOfMonth();
     // totalDays is working so its prolly localDateTime
-    int remainingDays = totalDaysInMonth - date.getDayOfMonth();
-    return remainingDays;
+    return totalDaysInMonth - date.getDayOfMonth();
+
 
 }
 public float calculate(){
