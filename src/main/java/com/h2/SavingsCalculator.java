@@ -53,7 +53,7 @@ private static int remainingDaysInMonth(java.time.LocalDate date){
 }
 public float calculate(){
 
-    return - sumOfCredits()  - sumOfDebits();
+    return  sumOfCredits() - sumOfDebits();
 }
 public static void main(String[] args) {
     String[] creditsAsString = args[0].split(",")
