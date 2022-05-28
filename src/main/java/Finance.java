@@ -14,11 +14,11 @@ public class Finance {
 
     public final static Map<String, String> commandsToUsage =
             Map.of( BEST_LOAN_RATES      ,    "usage: bestLoanRates",
-                    SAVINGS_CALCULATOR   ,    "usage: savingsCalculator<credits separated by ','> <debits separated by ','>" ,
+                    SAVINGS_CALCULATOR   ,    "usage: savingsCalculator <credits separated by ','> <debits separated by ','>" ,
                     MORTGAGE_CALCULATOR  ,    "usage: mortgageCalculator <loanAmount> <termInYears> <annualRate>" );
 
-    //  <usage: savingsCalculator <credits separated by ','> <debits separated by ','>>
-    // <usage: savingsCalculator>
+    // <usage: savingsCalculator <credits separated by ','> <debits separated by ','>>
+    // <usage: savingsCalculator <credits separated by ','> <debits separated by ','>>
     private static boolean validateCommandArguments(String[] args) {
         switch (args[0]){
             case BEST_LOAN_RATES: args[0] = "bestLoanRates";
@@ -38,11 +38,11 @@ private static void executeCommand(String command, String[] arguments){
             BestLoanRates.main(arguments);
             return;
         case SAVINGS_CALCULATOR:
-            System.out.println("Finding your net Savings ...");
+            System.out.println("Finding your net savings ...");
             SavingsCalculator.main(arguments);
            return;
         case MORTGAGE_CALCULATOR:
-            System.out.println("Finding Your Monthly payment ...");
+            System.out.println("Finding Your monthly payment ...");
             MortgageCalculator.main(arguments);
             return;
     }}
